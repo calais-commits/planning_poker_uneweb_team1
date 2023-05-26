@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Reset CSS "Start" */
+
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+ :root {
+    box-sizing: border-box;
+    --OS-font: 'Open Sans', sans-serif; /* llamar con "var(--OS-font);" */
+ }
+
+ body {
+    font-family: sans-serif;
+    background: #11131e;
+ }
+ 
+
+ /* Reset CSS "End" */
+
+ /* Header "Start"*/
+
+.navbar{
+    position: relative;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+}
+
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-brand{
+    font-family: var(--OS-font);
+    font-weight: bold;
+}
+
+.navbar-right {
+    float: right;
+    padding: 0;
+}
+
+.nav-item {
+    float: left;
+    padding-top: 2.18rem;
+    margin-right: 0.3rem;
+}
+
+.nav-item a{
+    padding: 0
+}
+
+.user-img{
+    width: 5rem;
+    border-radius: 3rem;
+}
+
+/* Header "End" */
+
+/* Body -main "Start"*/
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    justify-content: center;
+    align-items: center; 
+    width: 4rem;
+    height: 7.5rem;
+    background: white;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+    margin: 0.3rem;
+    font-size: 2.5rem;
+
+}
+
+.card:focus{
+    background-color: #c250c0;
+}
+
+.coffe{
+    width: 100%;
+    height: 85%;
+}
+
+
+
