@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['user'])) {
+        header("Location: login.php");
+        exit();
+    }
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -14,6 +23,7 @@
         <nav class="navbar navbar-expand-lg" >
             <div class="container-fluid container">
               <a class="navbar-brand" href="#">Planning Poker</a>
+              <a href="logout.php">Cerrar sesión</a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item ">
