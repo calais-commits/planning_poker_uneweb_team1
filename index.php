@@ -23,15 +23,24 @@
         <nav class="navbar navbar-expand-lg" >
             <div class="container-fluid container">
               <a class="navbar-brand" href="#">Planning Poker</a>
-              <a href="logout.php">Cerrar sesión</a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-right">
-                    <li class="nav-item ">
-                        <a class="nav-link active " aria-current="page" href="#">"Usuario"</a>
-                    </li>
                     <li>
-                        <img src="assets/default.jpg" alt="" class="user-img">
+                        <img src="assets/default.png" alt="" class="user-img">
                     </li>
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?php
+                            $user = $_SESSION['user'];
+                            echo $user;
+                            ?>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="logout.php" class="dropdown-item">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
                 </ul>
               </div>
             </div>
@@ -82,6 +91,7 @@
     </main>
     
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

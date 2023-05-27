@@ -22,7 +22,7 @@
       $sql->bindValue(':nombre', $user); 
       try {
         $sql->execute();
-        $_SESSION['user'] = $pdo->lastInsertId();
+        $_SESSION['user'] = $user;
         header("Location: index.php");
         exit();
       } catch (PDOException $e) {
